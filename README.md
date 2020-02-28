@@ -13,8 +13,8 @@ You can view the client API docs by serving the docs from this repository : [htt
 ## Status
 [![Build Status](https://travis-ci.com/bishy999/go-foreman.svg?branch=master)](https://travis-ci.com/bishy999/go-foreman)
 [![Go Report Card](https://goreportcard.com/badge/github.com/bishy999/go-foreman)](https://goreportcard.com/report/github.com/bishy999/go-foreman)
-[![GoDoc](https://godoc.org/github.com/bishy999/go-foreman/pkg/foreman?status.svg)](https://godoc.org/github.com/bishy999/go-foremanpkg/foreman)
-[![GolangCI](https://golangci.com/badges/github.com/bishy999/go-foreman.svg)](https://golangci.com)
+[![GoDoc](https://godoc.org/github.com/bishy999/go-foreman/pkg/foreman?status.svg)](https://godoc.org/github.com/bishy999/go-foreman/pkg/foreman)
+[![GolangCI](https://golangci.com/badges/github.com/bishy999/go-foreman.svg)](https://golangci.com/r/github.com/bishy999/go-foreman)
 ![GitHub Repo size](https://img.shields.io/github/repo-size/bishy999/go-foreman)
 [![GitHub Tag](https://img.shields.io/github/tag/bishy999/go-foreman.svg)](https://github.com/bishy999/go-foreman/releases/latest)
 [![GitHub Activity](https://img.shields.io/github/commit-activity/m/bishy999/go-foreman)](https://github.com/bishy999/go-foreman)
@@ -25,7 +25,7 @@ You can view the client API docs by serving the docs from this repository : [htt
 
 ### Download package
 ```go
- go get github.com/bishy999/go-foreman/foreman
+ go get github.com/bishy999/go-foreman
  ```
 
 ### Use package
@@ -144,6 +144,7 @@ func main() {
 
 
 
+
 ```
 
 ## Usage (binary)
@@ -153,10 +154,11 @@ Download the client binary from the repository and compile it with version
 Go get will download from the master, as such when we download it give it the tag verison from the master
 
 ```go
-go get -ldflags "-X main.version=v1.0.2 -X main.buildstamp=`TZ=UTC date -u '+%Y-%m-%dT%H:%M:%SZ'`)" github.com/bishy999/go-foreman/foreman/cmd/foreman-client
+go get -ldflags "-X main.version=v1.0.1 -X main.buildstamp=`TZ=UTC date -u '+%Y-%m-%dT%H:%M:%SZ'`)" github.com/bishy999/go-foreman/cmd/foreman-client
 
 foreman-client create -name=mytestenv.com -size=i3.4xlarge -group=1 -profile=2
 
+foreman-client delete -name=mytestenv.com
 ```
 
 
