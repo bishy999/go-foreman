@@ -29,6 +29,8 @@ type hostsReq struct {
 type hostsReqBody struct {
 	Name                    string            `json:"name"`
 	HostgroupID             int               `json:"hostgroup_id"`
+	OrganisationID          int               `json:"organization_id"`
+	LocationID         		int               `json:"location_id"`
 	Managed                 bool              `json:"managed"`
 	ComputeProfileID        string            `json:"compute_profile_id"`
 	ProvisionMethod         string            `json:"provision_method"`
@@ -63,6 +65,8 @@ func (ci *ConnectionInfo) CreateHost(ctx context.Context) (bool, string, error) 
 	requestBody := hostsReqBody{
 		Name:                    ci.Hostname,
 		HostgroupID:             ci.Group,
+		OrganisationID:			 9,
+		LocationID:              15,
 		Managed:                 true,
 		ComputeProfileID:        ci.Profile,
 		ProvisionMethod:         "image",
